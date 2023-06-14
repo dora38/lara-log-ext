@@ -1,0 +1,28 @@
+{
+    "name": "dora38/lara-log-ext",
+    "description": "Logging extension for Laravel",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Dora38\\LogExt\\": "src/"
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Dora38\\LogExt\\ServiceProvider"
+            ]
+        }
+    },
+    "require": {
+        "php": ">=8.1",
+        "barryvdh/laravel-debugbar": "^3|^4|^5|^6|^7",
+        "laravel/framework": "^10|^11|^12|^13|^14"
+    }
+}
