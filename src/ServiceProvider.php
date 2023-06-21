@@ -18,6 +18,7 @@ class ServiceProvider extends BaseServiceProvider
         CommandLogger $commandLogger,
         RouteLogger $routeLogger,
         SqlLogger $sqlLogger,
+        QueueLogger $queueLogger,
     ): void
     {
         $this->publishes([__DIR__ . '/../config/log-ext.php' => config_path('log-ext.php')]);
@@ -51,6 +52,13 @@ class ServiceProvider extends BaseServiceProvider
             )
         ) {
             $sqlLogger->setupListeners(strtolower(config('log-ext.sql_log_level')));
+        }
+
+        if (
+            $this->checkLogLevel('log-ext.queue_log_level') and
+            config('log-ext.queue-log-enable')
+        ) {
+            $queueLogger->setupListeners(strtolower(config('log-ext.queue-log-level')));
         }
     }
 

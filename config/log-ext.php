@@ -4,7 +4,7 @@ return [
     // Writing command logs in console commands.
     'command_log_enable' => (bool) env('COMMAND_LOG_ENABLE', false),
 
-    // Log level of Commando logs: emergency|alert|critical|error|warning|notice|info|debug
+    // Log level of command logs: emergency|alert|critical|error|warning|notice|info|debug
     'command_log_level' => (string) env('COMMAND_LOG_LEVEL', 'info'),
 
     // Commands that will be excluded for command logs.
@@ -13,7 +13,7 @@ return [
     // Writing route logs in http operations.
     'route_log_enable' => (bool) env('ROUTE_LOG_ENABLE', false),
 
-    // Log level of Commando logs: emergency|alert|critical|error|warning|notice|info|debug
+    // Log level of route logs: emergency|alert|critical|error|warning|notice|info|debug
     'route_log_level' => (string) env('ROUTE_LOG_LEVEL', 'info'),
 
     // Commands that will be excluded for command logs.
@@ -30,4 +30,10 @@ return [
 
     // Log level of SQL trace logs: emergency|alert|critical|error|warning|notice|info|debug
     'sql_log_level' => (string) env('SQL_LOG_LEVEL', 'debug'),
+
+    // Writing queue logs in queue processing.
+    'queue-log-enable' => (bool) env('QUEUE_LOG_ENABLE', false),
+
+    // Log level of queue logs: emergency|alert|critical|error|warning|notice|info|debug
+    'queue-log-level' => env('QUEUE_LOG_LEVEL', 'debug'),
 ];
