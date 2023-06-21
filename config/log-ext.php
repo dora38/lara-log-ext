@@ -32,8 +32,8 @@ return [
     'sql_log_level' => (string) env('SQL_LOG_LEVEL', 'debug'),
 
     // Writing queue logs in queue processing.
-    'queue-log-enable' => (bool) env('QUEUE_LOG_ENABLE', false),
+    'queue_log_enable' => (bool) env('QUEUE_LOG_ENABLE', false),
 
     // Log level of queue logs: emergency|alert|critical|error|warning|notice|info|debug
-    'queue-log-level' => env('QUEUE_LOG_LEVEL', 'debug'),
+    'queue_log_level' => env('QUEUE_LOG_LEVEL', 'debug'),
 ];

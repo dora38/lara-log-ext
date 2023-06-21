@@ -56,9 +56,9 @@ class ServiceProvider extends BaseServiceProvider
 
         if (
             $this->checkLogLevel('log-ext.queue_log_level') and
-            config('log-ext.queue-log-enable')
+            config('log-ext.queue_log_enable')
         ) {
-            $queueLogger->setupListeners(strtolower(config('log-ext.queue-log-level')));
+            $queueLogger->setupListeners(strtolower(config('log-ext.queue_log_level')));
         }
     }
 
